@@ -1,0 +1,44 @@
+operation in MongoDB :-
+Create | Read | Update | Delete
+
+framework used for MongoDB (i n *.js script)
+
+mongoose : inserted in web application i.e used to connect MongoDB w/ frontend application (like browser or mobile/desktop app)
+
+mocha : MongoDB operation used by using mocha framework (it's library is called in *.js script)
+
+nodemon : Used to auto-execute test when there is changes in file modified date
+
+Middleware: Function that execute before & after some distinct operation/events
+(events : init{initialisation of model}, validate, save & remove) happens in mongoose. Types of Middleware :-
+pre: function that will execute before some operation/events
+post: function that will execute after some operation/events.
+
+They are defined inside model/collection files(in our case it's movie.js)
+
+pagination: Skip & Limit
+
+API requests methods(common ones) response to HTTP requests (below definition of API request methods are not exactly to be true,
+for ex: POST can be used to extract records, as each methods have set of rules by which API requests executes)
+1. POST : creating records (general purpose of HTTP requests)
+2. DELETE : delete request handle
+3. PUT : edit records handle requests
+4. GET : fetch records handle requests
+
+Node.js : backend engine written in javascript in command line etc,
+that run outside the browser, it can work w/ HTTP request
+
+Express.js : framework to work w/ HTTP request more similar (as compared to node.js),
+interpretating w/ HTTP request. Used to save time in interprepating HTTP request
+
+request handler : listen for HTTP request on specific routes, respond w/ particular code logic
+
+route : actual URL where HTTP request is made to
+
+BodyParser Middleware : when an incoming POST request body comes to Node, it doesn't comes all of it at once, it comes at tiny pieces,
+and express.js is not good at parsing these tiny pieces of POST request body, so we use BodyParser Middleware library in order to receive
+all of tiny pieces of POST requests body, and place it under req.body property
+
+Postman : application within chrome browser used to send test API method request(POST, GET etc) to an specific address
+
+NODE_ENV = global environment variable that will be used to check if MongoDB will run in an test or production environment(database as well).
